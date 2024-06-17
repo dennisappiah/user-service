@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="945ca4f9-bca0-4603-90d9-660427176d81" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/middleware/request_processtime.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/test/test_admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/test/test_user.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/middleware/rate_limiter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/database.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +66,7 @@
       <recent name="C:\Users\kofid\Videos\todosapp" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for app.test.test_user.test_user_change_password_invalid">
+  <component name="RunManager">
     <configuration name="Python tests for app.test.test_admin.test_admin_delete_todo" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="todosapp" />
       <option name="ENV_FILES" value="" />
