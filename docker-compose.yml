@@ -1,0 +1,41 @@
+services:
+  database:
+    image: postgres
+    container_name: todo-db-container
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: todo_db
+    volumes:
+      - tododb_vol:/data/postgres
+    networks:
+      - pgadmin_net
+    ports:
+      - "5432:5432"
+
+    restart: unless-stopped
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: todo-db_pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@pgadmin.org}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
+      PGADMIN_CONFIG_SERVER_MODE: "False"
+    volumes:
+      - tododb_pgadmin_vol:/var/lib/pgadmin
+    networks:
+      - pgadmin_net
+    ports:
+      - "5050:80"
+    depends_on:
+      - database
+    restart: unless-stopped
+
+networks:
+  pgadmin_net:
+    driver: bridge
+
+volumes:
+  tododb_vol:
+  tododb_pgadmin_vol:
